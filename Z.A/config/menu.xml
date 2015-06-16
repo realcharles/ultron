@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menus>
+  <menu id="menu-dashboard" order="0" name=""  roles="" target="/Home/Dashboard/" imgurl="dashboard.png"></menu>
+  <menu id="menu-collector"  order="10" name="采集器"  roles="" target="#" imgurl="collector.ico">
+    <menu id="menu-collector-nc" order="1" name="采集管理" target="/Collector/NC/" roles="" imgurl="collector_nc.ico"></menu>
+  </menu>
+  <menu id="menu-product"  order="10" name="产品库"  roles="" target="#" imgurl="product.ico">
+    <menu id="menu-product-my" order="1" name="我的产品库" target="/Product/My/" roles="" imgurl="product_my.ico"></menu>
+  </menu>
+  <menu id="menu-admin"  order="200" name="管理员"  roles="" target="#" imgurl="admin.png">
+    <menu id="menu-task-list" order="1" name="计划任务" target="/Task/List/" roles="" imgurl="admin_task.ico"></menu>
+  </menu>
+</menus>

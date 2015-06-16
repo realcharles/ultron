@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+   
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>奥创(Ultron)</title>
+    <script src="~/content/js/jquery.min.js"></script>
+    <script src="~/content/js/ext.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var bgs = [];
+            bgs.push("bg1.jpg");
+            $("body").css("background-image", "url('../../content/image/bg/" +  bgs[$.rnd(bgs.length)] + "')");
+            $("body").css("background-repeat", "no-repeat");
+            $("body").css("background-size", $("body").width() + "px");
+        });
+    </script>
+</head>
+<body>
+    @Html.Partial("_Login")
+</body>
+</html>

@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2875F24E-2BBB-4280-B36B-55C5DBB846CB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Z.A</RootNamespace>
+    <AssemblyName>Z.A</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\Z.DLLLibrary\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\Z.DLLLibrary\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Z.DLLLibrary\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\Z.DLLLibrary\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\EBayDevAccount.xml" />
+    <Content Include="config\menu.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="config\MongoDB.xml" />
+    <Content Include="content\css\bootstrap.min.css" />
+    <Content Include="content\css\kendo\images\back.png" />
+    <Content Include="content\css\kendo\images\kendoui.svg" />
+    <Content Include="content\css\kendo\images\wp8_icons.png" />
+    <Content Include="content\css\kendo\images\wp8_inverseicons.png" />
+    <Content Include="content\css\kendo\kendo.common.min.css" />
+    <Content Include="content\css\kendo\kendo.dataviz.metroblack.min.css" />
+    <Content Include="content\css\kendo\kendo.metroblack.min.css" />
+    <Content Include="content\css\kendo\MetroBlack\editor.png" />
+    <Content Include="content\css\kendo\MetroBlack\imagebrowser.png" />
+    <Content Include="content\css\kendo\MetroBlack\indeterminate.gif" />
+    <Content Include="content\css\kendo\MetroBlack\loading-image.gif" />
+    <Content Include="content\css\kendo\MetroBlack\loading.gif" />
+    <Content Include="content\css\kendo\MetroBlack\loading_2x.gif" />
+    <Content Include="content\css\kendo\MetroBlack\markers.png" />
+    <Content Include="content\css\kendo\MetroBlack\markers_2x.png" />
+    <Content Include="content\css\kendo\MetroBlack\slider-h.gif" />
+    <Content Include="content\css\kendo\MetroBlack\slider-v.gif" />
+    <Content Include="content\css\kendo\MetroBlack\sprite.png" />
+    <Content Include="content\css\kendo\MetroBlack\sprite_2x.png" />
+    <Content Include="content\css\kendo\MetroBlack\sprite_kpi.png" />
+    <Content Include="content\css\kendo\MetroBlack\sprite_kpi_2x.png" />
+    <Content Include="content\css\site.css" />
+    <Content Include="content\css\zTreeStyle\img\diy\1_close.png" />
+    <Content Include="content\css\zTreeStyle\img\diy\1_open.png" />
+    <Content Include="content\css\zTreeStyle\img\diy\2.png" />
+    <Content Include="content\css\zTreeStyle\img\diy\3.png" />
+    <Content Include="content\css\zTreeStyle\img\diy\4.png" />
+    <Content Include="content\css\zTreeStyle\img\diy\5.png" />
+    <Content Include="content\css\zTreeStyle\img\diy\6.png" />
+    <Content Include="content\css\zTreeStyle\img\diy\7.png" />
+    <Content Include="content\css\zTreeStyle\img\diy\8.png" />
+    <Content Include="content\css\zTreeStyle\img\diy\9.png" />
+    <Content Include="content\css\zTreeStyle\img\line_conn.gif" />
+    <Content Include="content\css\zTreeStyle\img\loading.gif" />
+    <Content Include="content\css\zTreeStyle\img\zTreeStandard.gif" />
+    <Content Include="content\css\zTreeStyle\img\zTreeStandard.png" />
+    <Content Include="content\css\zTreeStyle\zTreeStyle.css" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="content\image\amazon.png" />
+    <Content Include="content\image\background.jpg" />
+    <Content Include="content\image\bg\bg1.jpg" />
+    <Content Include="content\image\ebay.png" />
+    <Content Include="content\image\grab.cur" />
+    <Content Include="content\image\loading.gif" />
+    <Content Include="content\image\logo.png" />
+    <Content Include="content\image\menu\admin.png" />
+    <Content Include="content\image\menu\collector_nc.ico" />
+    <Content Include="content\image\menu\collector.ico" />
+    <Content Include="content\image\menu\dashboard.png" />
+    <Content Include="content\image\menu\admin_task.ico" />
+    <Content Include="content\image\menu\product.ico" />
+    <Content Include="content\image\menu\product_my.ico" />
+    <Content Include="content\js\angular.min.js" />
+    <Content Include="content\js\bootbox.min.js" />
+    <Content Include="content\js\bootstrap.min.js" />
+    <Content Include="content\js\collector\nc.js" />
+    <Content Include="content\js\ext.js" />
+    <Content Include="content\js\jquery.tmpl.min.js" />
+    <None Include="content\js\kendo\kendo.all.min.intellisense.js" />
+    <Content Include="content\js\home\dashboard.js" />
+    <Content Include="content\js\jquery.ztree.all-3.5.min.js" />
+    <Content Include="content\js\kendo\kendo.all.min.js" />
+    <Content Include="content\js\kendo\kendo.culture.zh-CN.min.js" />
+    <Content Include="content\js\kendo\kendo.messages.zh-CN.min.js" />
+    <Content Include="content\js\listing\checkin.js" />
+    <Content Include="content\js\listing\monitor.js" />
+    <Content Include="content\js\listing\query.js" />
+    <Content Include="content\js\product\my.js" />
+    <Content Include="content\js\task\list.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="content\css\kendo\images\kendoui.ttf" />
+    <Content Include="content\css\kendo\images\kendoui.woff" />
+    <None Include="content\js\jquery.intellisense.js" />
+    <Content Include="content\js\jquery.min.js" />
+    <Content Include="robot.txt" />
+    <Content Include="Web.config" />
+    <Content Include="content\js\jquery.min.map" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\_Login.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage.cshtml" />
+    <Content Include="Views\Home\Dashboard.cshtml" />
+    <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AjaxController.cs" />
+    <Compile Include="Controllers\CollectorController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\TaskController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="IoC\CollectorIoC.cs" />
+    <Compile Include="IoC\ProductIoC.cs" />
+    <Compile Include="Models\Collector\CollectorType.cs" />
+    <Compile Include="Models\Extension.cs" />
+    <Compile Include="Models\IMongo.cs" />
+    <Compile Include="Models\Product\CatelogType.cs" />
+    <Compile Include="Models\Product\ProductType.cs" />
+    <Compile Include="Models\UserType.cs" />
+    <Compile Include="T.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="IoC\AccountIoC.cs" />
+    <Compile Include="IoC\AjaxIoC.cs" />
+    <Compile Include="IoC\HomeIoC.cs" />
+    <Compile Include="IoC\TaskIoC.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Result.cs" />
+    <Compile Include="Task\T0.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Views\Task\List.cshtml" />
+    <Content Include="NLog.config" />
+    <None Include="Properties\PublishProfiles\debug.pubxml" />
+    <Content Include="Views\Collector\NC.cshtml" />
+    <Content Include="Views\Product\My.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Test\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Z.EBayV2\Z.EBayV2.csproj">
+      <Project>{18ffc60b-ca09-4153-908f-9c767ab3e34c}</Project>
+      <Name>Z.EBayV2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Z.MVC.Core\Z.MVC.Core.csproj">
+      <Project>{3189b313-63eb-4760-9346-382d6a932a12}</Project>
+      <Name>Z.MVC.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7299</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12345/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

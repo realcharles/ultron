@@ -1,0 +1,41 @@
+﻿body {
+    font-family:"Microsoft YaHei";
+    color:white;
+}
+input {
+    color:black;
+}
+textarea {
+    color:black;
+}
+.bootbox{
+    z-index:99999!important;
+    color:black;
+}
+.ztree li a {
+    color:white;
+}
+.k-menu-group {
+    -webkit-border-radius:10px; 
+}
+.k-item {
+    -webkit-border-radius:10px; 
+}
+.bgstretcher {
+    background-color: rgba(50,50,50,0.7);
+    padding:20px;
+    color:#fff;   
+    margin-left:5px;
+    margin-right:5px;
+    margin-bottom:5px;
+    -webkit-border-radius:20px; 
+}
+.zright {
+    text-align:right;
+}
+.zcenter {
+    text-align:center;
+}
+#pager {
+    text-align:center;
+}

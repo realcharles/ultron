@@ -1,0 +1,14 @@
+C:\code\Ultron\Z.MVC.Core\bin\Debug\Z.MVC.Core.dll
+C:\code\Ultron\Z.MVC.Core\bin\Debug\Z.MVC.Core.pdb
+C:\code\Ultron\Z.MVC.Core\bin\Debug\MongoDB.Bson.dll
+C:\code\Ultron\Z.MVC.Core\bin\Debug\MongoDB.Driver.dll
+C:\code\Ultron\Z.MVC.Core\bin\Debug\Newtonsoft.Json.dll
+C:\code\Ultron\Z.MVC.Core\bin\Debug\NLog.dll
+C:\code\Ultron\Z.MVC.Core\bin\Debug\System.Web.Mvc.dll
+C:\code\Ultron\Z.MVC.Core\bin\Debug\Z.DB.dll
+C:\code\Ultron\Z.MVC.Core\bin\Debug\Z.DB.pdb
+C:\code\Ultron\Z.MVC.Core\bin\Debug\System.Web.Mvc.xml
+C:\code\Ultron\Z.MVC.Core\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
+C:\code\Ultron\Z.MVC.Core\obj\Debug\Z.MVC.Core.csprojResolveAssemblyReference.cache
+C:\code\Ultron\Z.MVC.Core\obj\Debug\Z.MVC.Core.dll
+C:\code\Ultron\Z.MVC.Core\obj\Debug\Z.MVC.Core.pdb

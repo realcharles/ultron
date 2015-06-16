@@ -1,0 +1,5 @@
+C:\code\Ultron\ZK.DLLLibrary\bin\Debug\ZK.DLLLibrary.dll
+C:\code\Ultron\ZK.DLLLibrary\bin\Debug\ZK.DLLLibrary.pdb
+C:\code\Ultron\ZK.DLLLibrary\obj\Debug\ZK.DLLLibrary.dll
+C:\code\Ultron\ZK.DLLLibrary\obj\Debug\ZK.DLLLibrary.pdb
+C:\code\Ultron\ZK.DLLLibrary\obj\Debug\ZK.DLLLibrary.csprojResolveAssemblyReference.cache

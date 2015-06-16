@@ -1,0 +1,111 @@
+﻿<style>
+    #div-login {
+        position: relative;
+        background: rgba(100, 200, 300, 0.20);
+        border: 1px solid rgba(255,255,255, 0.3);
+        z-index: 1;
+        -moz-border-radius: 30px;
+        -webkit-border-radius: 30px;
+        border-radius: 30px;
+        -moz-box-shadow: 0px 0px 60px rgba(0,0,0,0.6);
+        -webkit-box-shadow: 0 0 60px rgba(0,0,0,0.6);
+        box-shadow: 0px 0px 60px rgba(0,0,0,0.6);
+    }
+</style>
+<link href="~/content/css/bootstrap.min.css" rel="stylesheet" />
+<script src="~/content/js/bootstrap.min.js"></script>
+<script src="~/content/js/bootbox.min.js"></script>
+<script src="~/content/js/jquery.tmpl.min.js"></script>
+
+<script type="text/javascript">
+    var loginForm;
+        $(document).ready(function () {
+            bootbox.setDefaults({
+                size:"small"
+            });
+
+            loginForm = bootbox.dialog({
+                message:$("#tmpl-login").tmpl().html()
+            });
+            $("input").each(function (i, input) {
+                $(input).focus(function () {
+                    $(input).css("border-bottom-color", "green");
+                    $(input).attr("placeholder", "请输入");
+                });
+                $(input).blur(function () {
+                    if ($(input).val() == "") {
+                        $(input).css("border-bottom-color", "red");
+                        $(input).attr("placeholder", "亲肥皂掉了");
+                    }
+                        
+                });
+            });
+            $("#txtUser").focus();
+            $("#txtUser").select();
+            $("#txtUser").keyup(function (event) {
+                if (event.keyCode == 13)
+                {
+                    $("#txtPsd").focus();
+                    $("#txtPsd").select();
+                }
+            });
+            $("#txtPsd").keyup(function (event) {
+                if (event.keyCode == 13)
+                    login();
+            });
+        });
+        function login() {
+            var usr = $("#txtUser").val();
+            var psd = $("#txtPsd").val();
+            if (usr == "" || psd == "") {
+                bootbox.alert("姿式不对!");
+                return;
+            }
+            loginForm.modal('hide');
+            $.ajaxZ({
+                type:"POST",
+                url:"/Account/Verify/", 
+                data: {
+                    Usr: usr,
+                    Psd: psd
+                },
+                sender:$("#btnLogin"),
+                callback: function (resp) {
+                    if (resp.ok) {
+                        setTimeout(function () {
+                            window.location.href = resp.data;
+                        }, 3000);
+                        bootbox.dialog({
+                            message: "<div style='text-align:center;color:green;font-weight:bold;'>欢迎进入奥创系统...</div>"
+                        })
+                    }
+                    else {
+                        bootbox.alert(resp.data);
+                        setTimeout(function () {
+                            window.location.href = window.location.href;
+                        }, 3000);
+                    }
+                }
+                });
+        }
+</script>
+<script type="text/x-jquery-tmpl" id="tmpl-login">
+    <div id="div-login">
+        <div class="text-center">
+            <img src="../../content/image/logo.png" style="width:128px;height:128px;"/>
+        </div>
+        <div>
+            <div class="input-group">
+                <span class="input-group-addon">用户</span>
+                <input type="text" id="txtUser" class="text-center" placeholder="用户名" style="font-weight:bold;color:green;" />
+            </div>
+            <div class="input-group" style="margin-top:10px;">
+                <span class="input-group-addon">密码</span>
+                <input type="password" id="txtPsd" class="text-center" placeholder="密码" style="font-weight: bold; color: green; " />
+            </div>
+        </div>
+        <div class="text-center" style="margin-top:20px;">
+            <button id="btnLogin" class="btn btn-success" onclick="login();">登   录</button>
+        </div>
+    </div>
+</script>

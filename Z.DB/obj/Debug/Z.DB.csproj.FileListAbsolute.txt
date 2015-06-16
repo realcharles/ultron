@@ -1,0 +1,6 @@
+C:\code\Ultron\Z.DB\bin\Debug\Z.DB.dll
+C:\code\Ultron\Z.DB\bin\Debug\Z.DB.pdb
+C:\code\Ultron\Z.DB\bin\Debug\MongoDB.Bson.dll
+C:\code\Ultron\Z.DB\bin\Debug\MongoDB.Driver.dll
+C:\code\Ultron\Z.DB\obj\Debug\Z.DB.dll
+C:\code\Ultron\Z.DB\obj\Debug\Z.DB.pdb

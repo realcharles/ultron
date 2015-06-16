@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+    ViewBag.Title = "管理员-任务管理";
+}
+<div id="list"></div>
+<script type="text/x-kendo-templete" id="tmpl-list">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>\#</th>
+                <th>任务名</th>
+                <th>上次运行时间</th>
+                <th>状态</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            # for (var i = 0; i < data.length; i++) { #
+            <tr>
+                <td>#=data[i].Id#</td>
+                <td>#=data[i].Name#</td>
+                <td>#=data[i].RunTime#</td>
+                <td>#=data[i].Statu#</td>
+                <td><button class="btn btn-success" onclick="$.task_list.run('#=data[i].Id#')">运行</button></td>
+            </tr>
+            # } #
+        </tbody>
+    </table>
+</script>
+

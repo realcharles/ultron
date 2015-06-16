@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/content/css/kendo/kendo.common.min.css" rel="stylesheet" />
+    <link href="~/content/css/kendo/kendo.metroblack.min.css" rel="stylesheet" />
+    <link href="~/content/css/bootstrap.min.css" rel="stylesheet" />   
+    <link href="~/content/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />
+    <link href="~/content/css/site.css" rel="stylesheet" />
+    <script src="~/content/js/jquery.min.js"></script>
+    <script src="~/content/js/bootstrap.min.js"></script>
+    <script src="~/content/js/bootbox.min.js"></script>
+    <script src="~/content/js/jquery.tmpl.min.js"></script>   
+    <script src="~/content/js/kendo/kendo.all.min.js"></script>
+    <script src="~/content/js/kendo/kendo.culture.zh-CN.min.js"></script>
+    <script src="~/content/js/kendo/kendo.messages.zh-CN.min.js"></script>
+    <script src="~/content/js/jquery.ztree.all-3.5.min.js"></script>
+    <script src="~/content/js/ext.js"></script>
+    <script src="~/content/js/@ViewData["zjs"]"></script>
+    @if (!string.IsNullOrEmpty(ViewBag.Js)){ 
+        var jsArr = ViewBag.Js.Split(new char[]{','});
+        foreach (var js in jsArr){
+             <script src="~/content/js/@js"></script>
+        } 
+    }
+    <script>
+        $(document).ready(function () {
+            @ViewData["init"];
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            resize();
+            $("#A-div-body").css("background-image", "url('../../content/image/background.jpg')");
+            $("#A-div-body").css("background-size", "cover");
+            $(window).resize(resize);
+        });
+        function resize() {
+            var height = $(window).height() - 40;
+            $("#A-div-body").css("height", height);
+            $("#A-div-body-content").css("height", height-10);
+        }
+    </script>
+</head>
+<body>
+    <div id="A-div-head">
+        @Html.Partial("_Menu")
+    </div>
+    <div id="A-div-body">
+        <div id="A-div-body-content" class="bgstretcher">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

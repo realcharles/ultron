@@ -1,0 +1,109 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+    ViewBag.Title = "采集管理";
+}
+<div class="zright">
+    <button class="btn btn-info" id="btnNC_New">新采集</button>
+</div>
+<div>
+    <div class="bgstretcher" style="width:300px;height:100%; float:left;">
+        <div id="div-nc-sum"></div>
+        <div id="tree" class="ztree"></div>
+    </div>
+    <div id="div-nc-detail" class="bgstretcher" style="float:left;margin-left:10px;display:none;"></div>
+</div>
+
+<script type="text/x-kendo-tmpl" id="tmpl-newnc-step1">
+    <div style="margin-top:30px;">
+        <div class="zcenter">
+            <input type="text" class="zcenter" style="width:90%;" id="txtNC_Name" placeholder="名称">
+        </div>
+        <div style="margin-top: 20px;">
+            <div style="margin-left:70px;">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="rdb-nc-execdt" value="0" checked>
+                        马上执行
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="rdb-nc-execdt" value="5">
+                        5分钟后执行
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="rdb-nc-execdt" value="10">
+                        10分钟后执行
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="rdb-nc-execdt" value="60">
+                        60分钟后执行
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="zcenter" style="margin-top:50px;">
+        <button class="btn btn-success" id="btnNC_NextStep">下一步</button>
+    </div>
+</script>
+<script type="text/x-kendo-tmpl" id="tmpl-newnc-step2">
+    <div style="margin-left:40px;">
+        <div class="radio-inline" style="margin-top:10px;">
+            <label>
+                <input type="radio" name="chk-newnc" value="ebay" />
+                <img src="../../content/image/ebay.png" alt="eBay" />
+            </label>
+        </div>
+        <br />
+        <div class="radio">
+            <label>
+                <input type="radio" name="chk-newnc" value="amazon" /><img src="../../content/image/amazon.png" alt="Amazon" />
+            </label>
+        </div>
+    </div>
+    <div style="margin-top:30px;margin-left:10px;" id="div-nc-setting">
+
+    </div>
+    <div style="margin-top:30px;text-align:center;">
+        <button class="btn btn-success" id="btnNC_OK" style="display:none;" onclick="$.collector_nc.newNC();">确定</button>
+    </div>
+</script>
+<script type="text/x-kendo-tmpl" id="tmpl-ebay">
+    <div class="input-group">
+        <span class="input-group-addon" id="checkin-addon">ItemID</span>
+        <input class="form-control" style="text-align:center;" id="nc-value" />
+    </div>
+</script>
+<script type="text/x-kendo-tmpl" id="tmpl-amazon">
+    <div style="text-align:center;">
+        <p><input id="ddlAmazonSite" type="text" style="text-align:center;width:270px;" /></p>
+        <p>
+            <div class="input-group">
+                <span class="input-group-addon" id="checkin-addon">ASIN</span>
+                <input class="form-control" style="text-align:center;" id="nc-value" />
+            </div>
+        </p>
+    </div>
+</script>
+<script type="text/x-kendo-tmpl" id="tmpl-nc-detail">
+    <div>
+        <p><span style="color:gray;">采集名称：</span>#=data.Name#</p>
+        <p><span style="color:gray;">创建人名：</span>#=data.User#</p>
+        <p><span style="color:gray;">采集目标：</span>#=data.For#</p>
+        <p><span style="color:gray;">创建时间：</span>#=data.InsDT#</p>
+        <p><span style="color:gray;">执行时间：</span>#=data.ExecDT#</p>
+        <p><span style="color:gray;">执行结果：</span>#=data.Result.Message#</p>
+        <hr />
+        <p><ul id="ullogs" style="font-size:x-small;">日志：</ul></p>
+    </div>
+    <hr />
+    <div class="zcenter">
+        <button class="btn btn-warning" onclick="$.collector_nc.deleteNC('#=data.ID#')">删除</button>
+        <button class="btn btn-success" onclick="$.collector_nc.doNC('#=data.ID#')" id="btnDo">执行</button>
+    </div>
+</script>

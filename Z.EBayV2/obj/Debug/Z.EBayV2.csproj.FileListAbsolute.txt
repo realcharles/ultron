@@ -1,0 +1,6 @@
+C:\code\Ultron\Z.EBayV2\bin\Debug\Z.EBayV2.dll
+C:\code\Ultron\Z.EBayV2\bin\Debug\Z.EBayV2.pdb
+C:\code\Ultron\Z.EBayV2\bin\Debug\MongoDB.Bson.dll
+C:\code\Ultron\Z.EBayV2\bin\Debug\Newtonsoft.Json.dll
+C:\code\Ultron\Z.EBayV2\obj\Debug\Z.EBayV2.dll
+C:\code\Ultron\Z.EBayV2\obj\Debug\Z.EBayV2.pdb

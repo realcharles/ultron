@@ -1,0 +1,57 @@
+﻿<script>
+    $(document).ready(function () {
+        $.ajaxZ({
+            url: "/Ajax/GetMenu/",
+            callback: function (resp) {
+                if (resp.ok) {
+                    var items = JSON.parse(resp.data);
+                    var ds = [];
+                    $(items).each(function (i, item) {
+                        var menu = {
+                            text: item.MenuName,
+                            imageUrl: "../../content/image/menu/" + item.ImgUrl,
+                            cssClass: "znav"
+                        };
+                        if (item.SubMenuItems && item.SubMenuItems.length > 0) {
+                            menu.items = [];
+                            $(item.SubMenuItems).each(function (i, sitem) {
+                                var smenu = {
+                                    text: sitem.MenuName,
+                                    imageUrl: "../../content/image/menu/" + sitem.ImgUrl,
+                                    url: sitem.Target
+                                };
+                                menu.items.push(smenu);
+                            });
+                        }
+                        ds.push(menu);
+                    });
+                    $("#div-head-menu").kendoMenu({
+                        dataSource: ds,
+                        animation: {
+                            open: {
+                                effects: "slideIn:down",
+                                duration: 300
+                            },
+                            close: {
+                                effects: "zoomOut",
+                                duration: 300
+                            }
+                        }
+                    });
+                }
+                else {
+                    bootbox.alert(resp.data);
+                }
+            }
+        });
+    });
+</script>
+<div id="div-head-menu">
+
+</div>
+<style scoped>
+    .znav {
+        font-size: medium;
+        font-family: 'Microsoft Yahei', sans-serif;
+    }  
+</style>
