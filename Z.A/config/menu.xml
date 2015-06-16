@@ -10,7 +10,4 @@
   <menu id="menu-admin"  order="200" name="管理员"  roles="" target="#" imgurl="admin.png">
     <menu id="menu-task-list" order="1" name="计划任务" target="/Task/List/" roles="" imgurl="admin_task.ico"></menu>
   </menu>
-   <menu id="menu-test"  order="200" name="test"  roles="" target="#" imgurl="admin.png">
-    <menu id="menu-task-test" order="1" name="test" target="/Task/List/" roles="" imgurl="admin_task.ico"></menu>
-  </menu>
 </menus>
